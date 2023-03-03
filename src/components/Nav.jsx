@@ -3,7 +3,6 @@ import React from "react";
 const Nav = () => {
   return (
     <nav>
-      <img src="/icons_assets/Logo.svg" alt="logo" />
       <ul>
         <li>
           <a href="/">Home</a>
