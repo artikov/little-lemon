@@ -2,28 +2,21 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <nav>
-      <ul>
+    <nav className="navbar">
+      <img src="/icons_assets/Logo.svg" alt="logo" />
+      <ul className="navbar-menu">
         <li>
           <a href="/">Home</a>
         </li>
-      </ul>
-      <ul>
         <li>
           <a href="/about">About</a>
         </li>
-      </ul>
-      <ul>
         <li>
           <a href="/menu">Menu</a>
         </li>
-      </ul>
-      <ul>
         <li>
           <a href="/reservations">Reservations</a>
         </li>
-      </ul>
-      <ul>
         <li>
           <a href="/login">Login</a>
         </li>
