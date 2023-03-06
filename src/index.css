@@ -72,6 +72,32 @@ code {
   border-radius: 26px;
 }
 
+.main__button {
+  background-color: rgba(244, 206, 20, 1);
+  border: none;
+  border-radius: 26px;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SPECIALS DESIGN */
+.specials__container {
+  height: 100vh;
+}
+
+/* TESTIMONIALS DESIGN */
+.testimonials__container {
+  height: 100vh;
+}
+
+/* ABOUT DESIGN */
+.about__container {
+  height: 100vh;
+}
+
 /* FOOTER DESIGN */
 .footer {
   display: flex;

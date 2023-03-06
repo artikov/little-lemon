@@ -14,6 +14,7 @@ const Main = () => {
           dolores ad reprehenderit pariatur exercitationem vero aperiam nihil
           dolore quibusdam eum, id, optio delectus cumque suscipit!
         </p>
+        <button className="main__button">Reserve a table</button>
       </div>
       <div className="main__img">
         <img src="/icons_assets/restauranfood.jpg" alt="logo" />
