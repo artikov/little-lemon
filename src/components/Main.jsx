@@ -26,8 +26,8 @@ const Main = () => {
         </div>
       </main>
       <Specials />
-      <About />
       <Testimonials />
+      <About />
     </>
   );
 };

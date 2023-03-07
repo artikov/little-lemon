@@ -109,7 +109,6 @@ code {
 }
 
 .specials-food__container {
-  height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
@@ -128,12 +127,47 @@ code {
 }
 
 .special__info {
-  padding: 20px;
+  padding: 1rem;
 }
 
 /* TESTIMONIALS DESIGN */
 .testimonials__container {
-  height: 100vh;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 100px;
+}
+
+.testimonial-cards__container {
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 0px;
+}
+
+.testimonial__container {
+  height: 400px;
+  background-color: #edefee;
+  border: 1px solid black;
+}
+
+.testimonial__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+.testimonial__img > img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.testimonial__info {
+  padding: 1rem;
 }
 
 /* ABOUT DESIGN */
