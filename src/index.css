@@ -173,6 +173,15 @@ code {
 /* ABOUT DESIGN */
 .about__container {
   height: 100vh;
+  display: flex;
+}
+
+.about__img {
+  width: 300px;
+}
+
+.about__img > img {
+  width: 100%;
 }
 
 /* FOOTER DESIGN */
