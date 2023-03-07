@@ -85,7 +85,50 @@ code {
 
 /* SPECIALS DESIGN */
 .specials__container {
+  display: flex;
+  padding: 20px 100px;
+  margin-top: 3rem;
+  flex-direction: column;
+}
+
+.specials__order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.order__button {
+  background-color: rgba(244, 206, 20, 1);
+  border: none;
+  border-radius: 26px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.specials-food__container {
   height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 0px;
+}
+
+/* SPECIALS CARDS DESIGN */
+.special__card {
+  height: 600px;
+  background-color: #edefee;
+}
+
+.special__img > img {
+  width: 100%;
+}
+
+.special__info {
+  padding: 20px;
 }
 
 /* TESTIMONIALS DESIGN */
