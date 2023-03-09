@@ -42,12 +42,13 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 20px 100px;
   background-color: rgba(73, 94, 87, 1);
 }
 
 .main__info {
-  width: 50%;
+  width: 500px;
 }
 
 .main__title {
@@ -56,14 +57,15 @@ code {
   margin: 0;
   font-weight: 450;
 }
+
 .main__subtitle {
   font-size: 48px;
   margin: 0;
 }
 
 .main__img {
-  margin: 3rem;
-  width: 50%;
+  margin: 1rem;
+  width: 500px;
   display: flex;
   justify-content: center;
   margin-bottom: -100px;
@@ -112,10 +114,10 @@ code {
 
 .specials-food__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 1fr;
   grid-column-gap: 3rem;
-  grid-row-gap: 0px;
+  grid-row-gap: 20px;
 }
 
 /* SPECIALS CARDS DESIGN */
@@ -143,10 +145,10 @@ code {
 .testimonial-cards__container {
   margin: 4rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 1fr;
   grid-column-gap: 3rem;
-  grid-row-gap: 0px;
+  grid-row-gap: 20px;
 }
 
 .testimonial__container {
@@ -175,14 +177,34 @@ code {
 /* ABOUT DESIGN */
 .about__container {
   display: flex;
+  height: 800px;
+  margin: 2rem 0;
+  padding: 20px 100px;
 }
 
-.about__img {
-  width: 400px;
+.about__info {
+  width: 50%;
 }
 
-.about__img > img {
-  width: 100%;
+.about__imgs {
+  width: 50%;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about__imgs > img {
+  display: block;
+  height: auto;
+  width: 500px;
+}
+
+.about__imgs img:nth-child(2) {
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+  z-index: 1;
 }
 
 /* FOOTER DESIGN */

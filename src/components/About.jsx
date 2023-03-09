@@ -12,7 +12,7 @@ const About = () => {
           reiciendis error recusandae ut.
         </p>
       </div>
-      <div className="about__img">
+      <div className="about__imgs">
         <img src="/icons_assets/Mario_and_Adrian_A.jpg" alt="" />
         <img src="/icons_assets/Mario_and_Adrian_b.jpg" alt="" />
       </div>
