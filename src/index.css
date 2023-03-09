@@ -15,6 +15,7 @@ code {
 /* NAVBAR DESIGN */
 .navbar {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
   padding: 20px 100px;
@@ -22,6 +23,7 @@ code {
 
 .navbar__menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   list-style-type: none;
@@ -172,12 +174,11 @@ code {
 
 /* ABOUT DESIGN */
 .about__container {
-  height: 100vh;
   display: flex;
 }
 
 .about__img {
-  width: 300px;
+  width: 400px;
 }
 
 .about__img > img {
