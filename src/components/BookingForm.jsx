@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 
-const BookingForm = ({ times }) => {
+const BookingForm = () => {
   const [formData, setFormData] = useState({
     date: "",
     time: "",
     guests: "",
     occasion: "",
   });
+
+  const timesArr = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+
+  const [times, setTimes] = useState(timesArr);
 
   const handleSubmit = (e) => {
     e.preventDefault();
