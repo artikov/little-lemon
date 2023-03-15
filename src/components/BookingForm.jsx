@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { submitAPI } from "../reservationsAPI";
+import { useNavigate } from "react-router-dom";
 
 const BookingForm = ({ availableTimes, updateTimes }) => {
   const [formData, setFormData] = useState({
@@ -13,9 +15,13 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
     availableTimes.map((time) => <option key={time}>{time}</option>)
   );
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    submitAPI(formData);
+    navigate("/confirmation");
   };
 
   const handleChange = (e) => {
