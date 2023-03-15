@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, updateTimes }) => {
   const [formData, setFormData] = useState({
-    date: "",
-    time: "",
     guests: "",
     occasion: "",
   });
 
-  const timesArr = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  const initDate = new Date().toISOString().slice(0, 10);
+  const [date, setDate] = useState(initDate);
 
-  const [times, setTimes] = useState(timesArr);
+  const [times, setTimes] = useState(
+    availableTimes.map((time) => <option key={time}>{time}</option>)
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,7 +24,15 @@ const BookingForm = () => {
       ...prevState,
       [name]: value,
     }));
-    console.log(formData);
+  };
+
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+
+    const newDate = new Date(e.target.value);
+    updateTimes(newDate);
+
+    setTimes(availableTimes.map((times) => <option>{times}</option>));
   };
 
   return (
@@ -37,8 +46,8 @@ const BookingForm = () => {
           type="date"
           id="res-date"
           name="date"
-          value={formData.date}
-          onChange={handleChange}
+          value={date}
+          onChange={handleDateChange}
         />
         <label htmlFor="res-time">Choose time</label>
         <select
@@ -47,9 +56,7 @@ const BookingForm = () => {
           value={formData.time}
           onChange={handleChange}
         >
-          {times.map((time) => (
-            <option key={time}>{time}</option>
-          ))}
+          {times}
         </select>
         <label htmlFor="guests">Number of guests</label>
         <input
