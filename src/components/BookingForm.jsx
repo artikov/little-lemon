@@ -79,10 +79,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
 
   return (
     <>
-      <form
-        style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
-        onSubmit={handleSubmit}
-      >
+      <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="res-date">Choose date</label>
         <input
           type="date"
@@ -92,7 +89,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
           onChange={handleDateChange}
         />
 
-        {errors.date && <p style={{ color: "red" }}>{errors.date}</p>}
+        {errors.date && <p className="error">{errors.date}</p>}
 
         <label htmlFor="res-time">Choose time</label>
         <select
@@ -104,7 +101,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
           {times}
         </select>
 
-        {errors.time && <p style={{ color: "red" }}>{errors.time}</p>}
+        {errors.time && <p className="error">{errors.time}</p>}
 
         <label htmlFor="guests">Number of guests</label>
         <input
@@ -118,7 +115,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
           onChange={handleChange}
         />
 
-        {errors.guests && <p style={{ color: "red" }}>{errors.guests}</p>}
+        {errors.guests && <p className="error">{errors.guests}</p>}
 
         <label htmlFor="occasion">Occasion</label>
         <select
@@ -131,7 +128,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
           <option>Anniversary</option>
         </select>
 
-        {errors.occasion && <p style={{ color: "red" }}>{errors.occasion}</p>}
+        {errors.occasion && <p className="error">{errors.occasion}</p>}
 
         <button type="submit">Make Your reservation</button>
       </form>
